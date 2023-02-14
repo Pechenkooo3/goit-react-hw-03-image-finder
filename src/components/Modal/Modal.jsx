@@ -6,7 +6,7 @@ import { Overlay, ModalBody } from './Modal.styled';
 const modalRoot = document.querySelector('#modal-root');
 
 export default class Modal extends Component {
-  static defaultProps = {
+   PropTypes = {
     largeImageURL: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
   };

@@ -6,7 +6,7 @@ import {
 } from './ImageGalleryItem.styled';
 import { Component } from 'react';
 class ImageGalleryItem extends Component {
-  static defaultProps = {
+  PropTypes = {
     image: PropTypes.shape({
       webformatURL: PropTypes.string.isRequired,
       largeImageURL: PropTypes.string.isRequired,

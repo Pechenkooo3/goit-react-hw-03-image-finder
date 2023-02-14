@@ -7,11 +7,24 @@ import {
 } from './Searchbar.styled';
 import { BsSearch } from 'react-icons/bs';
 import { IconContext } from 'react-icons';
+import {  toast } from 'react-toastify';
 
 const Searchbar = ({ onSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
-    onSubmit(e.target.search.value.trim());
+    if (e.target.search.value.trim() === '') {
+      return toast.error('Please enter name', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+      }); 
+    }
+      onSubmit(e.target.search.value.trim());
     e.currentTarget.reset();
   };
   return (
