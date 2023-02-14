@@ -5,6 +5,8 @@ import {
   SearchFormBtnLabel,
   SearchFormInput,
 } from './Searchbar.styled';
+import { BsSearch } from 'react-icons/bs';
+import { IconContext } from 'react-icons';
 
 const Searchbar = ({ onSubmit }) => {
   const handleSubmit = e => {
@@ -16,7 +18,12 @@ const Searchbar = ({ onSubmit }) => {
     <SearchbarWrp>
       <SearchForm onSubmit={handleSubmit}>
         <SearchFormBtn type="submit">
-          <SearchFormBtnLabel>Search</SearchFormBtnLabel>
+          <SearchFormBtnLabel>
+            <IconContext.Provider value={{ color: 'white', size: '2em',
+  }}>
+              <BsSearch/>
+            </IconContext.Provider>
+          </SearchFormBtnLabel>
         </SearchFormBtn>
         <SearchFormInput
           name="search"

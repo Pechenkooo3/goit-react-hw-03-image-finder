@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const SearchbarWrp = styled.header`
   top: 0;
   left: 0;
@@ -48,9 +49,11 @@ export const SearchFormBtn = styled.button`
 `;
 
 export const SearchFormBtnLabel = styled.span`
-  position: absolute;
-  width: 1px;
-  height: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
   padding: 0;
   overflow: hidden;
   border: 0;
